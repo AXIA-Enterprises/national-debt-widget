@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Debt Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>U.S. National Debt Calculator</h1>
+        <p id="last-updated"></p>
+        
+        <div class="stats">
+            <h2>Current Stats</h2>
+            <p>National Debt: <span id="debt"></span></p>
+            <p>Population: <span id="population"></span></p>
+            <p>Debt per Person: <span id="per-capita"></span></p>
+        </div>
+        
+        <div class="projection">
+            <h2>Project Future Debt</h2>
+            <label>Annual Deficit (in trillions, e.g., 1.5): <input type="number" id="deficit" value="1.5" step="0.1"></label>
+            <label>Annual Interest Rate (%): <input type="number" id="interest-rate" value="3" step="0.1"></label>
+            <label>Years Ahead: <input type="number" id="years" value="10"></label>
+            <button onclick="calculateProjection()">Calculate</button>
+            <p>Projected Debt: <span id="projected-debt"></span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
